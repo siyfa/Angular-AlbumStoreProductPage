@@ -7,9 +7,8 @@ import { Product } from "./product";
 
 @Injectable()
 export class ProductService {
-  // tslint:disable-next-line:member-ordering
   private _albumUrl = "../assets/album.json";
-  private _productUrl = "../assests/products.json";
+  private _productsUrl = "../assests/products.json";
 
   constructor(private _http: Http) {}
   getAlbum(id: number): Observable<Album> {
@@ -19,7 +18,7 @@ export class ProductService {
   }
   getProducts(): Observable<Product[]> {
     return this._http
-      .get(this._productUrl)
+      .get(this._productsUrl)
       .map((response) => <Product[]>response.json());
   }
 }
