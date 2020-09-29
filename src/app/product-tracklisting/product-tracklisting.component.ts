@@ -8,7 +8,7 @@ import { Album } from "../album";
   styleUrls: ["./product-tracklisting.component.css"],
 })
 export class ProductTracklistingComponent implements OnInit {
-  albumInfo: any;
+  albumInfo: Album;
   constructor(private _productSerivce: ProductService) {}
 
   ngOnInit() {
