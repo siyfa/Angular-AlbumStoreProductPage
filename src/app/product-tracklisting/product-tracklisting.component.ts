@@ -9,10 +9,10 @@ import { Album } from "../album";
 })
 export class ProductTracklistingComponent implements OnInit {
   albumInfo: Album;
-  constructor(private _productSerivce: ProductService) {}
+  constructor(private _productService: ProductService) {}
 
   ngOnInit() {
-    this._productSerivce
+    this._productService
       .getAlbum(1)
       .subscribe((response) => (this.albumInfo = response));
   }
